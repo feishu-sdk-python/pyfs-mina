@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from pywe_decrypt import decrypt
-from pywe_storage import MemoryStorage
+from pyfs_decrypt.data import decrypt
 
-from pyfs_base import BaseFeishu
 from pyfs_auth import AppAccessToken, final_app_access_token
 
 
@@ -28,7 +26,6 @@ class MiniApp(AppAccessToken):
         return False
 
     def get_session_info(self, appid=None, secret=None, token=None, code=None, unid=None, storage=None):
-        import ipdb;ipdb.set_trace()
         """
         # 返回示例 ：
         {
@@ -93,7 +90,7 @@ class MiniApp(AppAccessToken):
         # Update sessionKey
         if not session_key:
             session_key = self.get_session_key(appid=appid, secret=secret, token=token, code=code, unid=unid, storage=self.storage)
-        return decrypt(appId=self.appid, sessionKey=session_key, encryptedData=encryptedData, iv=iv)
+        return decrypt(session_key=session_key, encrypted_data=encryptedData, iv=iv)
 
 
 miniapp = MiniApp()
