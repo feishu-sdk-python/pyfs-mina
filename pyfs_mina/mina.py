@@ -69,19 +69,12 @@ class MiniApp(AppAccessToken):
     def get_userinfo(self, appid=None, secret=None, token=None, code=None, unid=None, session_key=None, encryptedData=None, iv=None, storage=None):
         """
         {
-            "avatarUrl": "avatarUrl",
-            "city": "city",
-            "country": "country",  # CN
-            "gender": gender,  # 0 or 1
-            "language": "language",  # zh_CN
-            "nickName": "nickName",
-            "openId": "openId",
-            "province": "province",
-            "unionId": "unionId",
+            "openId": "ou_529a6770d21625dfdd792352d75fb79b",
             "watermark": {
-                "appid": "appid",
-                "timestamp": timestamp  # 1477314187
-            }
+                "timestamp": 1548251549,
+                "appid": 6648491577574883592
+            },
+            "unionId": "ou_c68f35107bcd8abf9767c802c2887ecd"
         }
         """
         # If not encryptedData return session_info
