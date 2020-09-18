@@ -77,6 +77,8 @@ class MiniApp(AppAccessToken):
             "unionId": "ou_c68f35107bcd8abf9767c802c2887ecd"
         }
         """
+        # Update params
+        self.update_params(appid=appid, secret=secret, storage=storage)
         # If not encryptedData return session_info
         if not encryptedData:
             return self.get_session_info(appid=appid, secret=secret, token=token, code=code, unid=unid, storage=storage)
