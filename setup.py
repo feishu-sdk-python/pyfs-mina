@@ -20,7 +20,7 @@ setup(
 
     packages=['pyfs_mina'],
     py_modules=[],
-    install_requires=['pyfs-auth', 'pywe-decrypt'],
+    install_requires=['pyfs-auth', 'pyfs-decrypt'],
 
     classifiers=[
         "License :: OSI Approved :: BSD License",
